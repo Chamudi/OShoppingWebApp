@@ -1,20 +1,39 @@
-<div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">OShop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <h3 class="d-flex justify-content-center">OShop App Demo </h3>
-    <h5 class="d-flex justify-content-center">Online Shopping Web App Portal</h5>
-
-    <nav class="navbar navbar-expand-sm bg-light navbar-dark">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <button routerLink="product" class="m-1 btn btn-light btn-outline-primary" Button>Product</button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a routerLink="product" class="nav-link" href="#">Product <span class="sr-only">(current)</span></a>
             </li>
-
             <li class="nav-item">
-                <button routerLink="employee" class="m-1 btn btn-light btn-outline-primary" Button>Categories</button>
+                <a routerLink="employee" class="nav-link" href="#">Categories</a>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </ul>
-    </nav>
+        <button class="btn btn-primary my-2 my-sm-0" type="submit">Login & SignUp</button>
+        <button class="btn btn-primary my-2 my-sm-0" type="submit">Cart</button>
+    </div>
+</nav>
 
-    <router-outlet></router-outlet>
-
-</div>
+<router-outlet></router-outlet>
