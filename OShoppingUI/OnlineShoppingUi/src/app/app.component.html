@@ -31,56 +31,98 @@
                 <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
             </form>
         </ul>
-        <button class="btn btn-primary my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#LoginSignUp">Login & SignUp</button>
+        <button class="btn btn-primary my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#sem-login">Login & SignUp</button>
         <button class="btn btn-primary my-2 my-sm-0" type="submit">Cart</button>
     </div>
 </nav>
 
-<!-- Modal -->
-<div class="modal fade" id="LoginSignUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+
+<!-- The Modal Register -->
+<div class="modal fade seminor-login-modal" data-backdrop="static" id="sem-reg">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
-                <ul class="nav nav-pills nav-fill">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#loginnav">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#SignUpnav">SignUp</a>
-                    </li>
-                </ul>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-            </div>
-            <div class="modal-body">
-                <div class="tab-content">
-                    <div class="tab-pane fade" id="loginnav" role="tabpanel" aria-labelledby="home-tab">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <button type="submit" class="btn btn-primary center">Login</button>
-                        </form>
+            <!-- Modal body -->
+            <div class="modal-body seminor-login-modal-body">
+                <h5 class="modal-title text-center">CREATE AN ACCOUNT</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                </button>
+                <form class="seminor-login-form">
+                    <div class="form-group">
+                        <input type="name" class="form-control" required autocomplete="off">
+                        <label class="form-control-placeholder" for="name">User Name</label>
                     </div>
-                </div>
-            </div>
-            <div class="modal-footer">
+                    <div class="form-group">
+                        <input type="email" class="form-control" required autocomplete="off">
+                        <label class="form-control-placeholder" for="name">Email address</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" required autocomplete="off">
+                        <label class="form-control-placeholder" for="name">Phone Number</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" required autocomplete="off">
+                        <label class="form-control-placeholder" for="name">Address</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" required autocomplete="off">
+                        <label class="form-control-placeholder" for="password">Password</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" required autocomplete="off">
+                        <label class="form-control-placeholder" for="password">Confirm Password</label>
+                    </div>
+                    <div class="btn-check-log">
+                        <button type="submit" class="btn-check-login">SIGN UP</button>
+                    </div>
+                    <div class="create-new-fau text-center pt-3">
+                        <a href="#" class="text-primary-fau"><span data-toggle="modal" data-target="#sem-login" data-dismiss="modal">Already Have An Account</span></a>
+                    </div>
+                </form>
 
             </div>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <app-register></app-register>
+<!-- The Modal Login -->
+<div class="modal fade seminor-login-modal" data-backdrop="static" id="sem-login">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- Modal body -->
+            <div class="modal-body seminor-login-modal-body">
+                <h5 class="modal-title text-center">LOGIN TO MY ACCOUNT</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                </button>
+                <form class="seminor-login-form">
+                    <div class="form-group">
+                        <input type="email" class="form-control" required autocomplete="off">
+                        <label class="form-control-placeholder" for="name">Email address</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" required autocomplete="off">
+                        <label class="form-control-placeholder" for="password">Password</label>
+                    </div>
+                    <div class="btn-check-log">
+                        <button type="submit" class="btn-check-login">LOGIN</button>
+                    </div>
+                    <div class="forgot-pass-fau text-center pt-3">
+                        <a href="#" class="text-secondary">Forgot Your Password?</a>
+                    </div>
+                    <div class="create-new-fau text-center pt-3">
+                        <a href="#" class="text-primary-fau"><span data-toggle="modal" data-target="#sem-reg" data-dismiss="modal">Create A New Account</span></a>
+                    </div>
+
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
 </div>
+
 
 
 <router-outlet></router-outlet>
