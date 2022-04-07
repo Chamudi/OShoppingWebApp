@@ -9,6 +9,11 @@ namespace OShoppingWebApp.Models
 {
     public class UserReg : IdentityUser
     {
-        public string FullName { get; set; }
+        public int CustomerId { get; set; }
+        public string CusName { get; set; }
+        public string CusEmail { get; set; }
+        public string CusMobile { get; set; }
+        public string CusAddress { get; set; }      
+        public string CusPassword { get; set; }
     }
 }
